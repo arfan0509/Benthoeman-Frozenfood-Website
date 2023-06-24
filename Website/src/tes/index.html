@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Benthoeman Frozen Food</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="src/nuggets.png">
+</head>
+
+<body>
+  <div class="fcontainer ">
+    <!-- Navigasi Menu-->
+    <nav class="navbar navbar-expand-lg sticky-top" id="navbar">
+
+      <div class="container-fluid ">
+        <a class="navbar-brand" id="brand" href="#">
+          <span id="br1">Benthoeman</span>
+          <br>
+          <span id="br2">FrozenFood</span>
+        </a>
+
+        <!-- Button Toogle -->
+        <button class="navbar-toggler" id="toggle" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0 gap-3 ">
+            <li class="nav-item">
+              <a class="nav-link" id="nav" href="#">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link " id="nav" href="#">About Us</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link " id="nav" href="#">Products</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link " id="nav" href="#">Contact</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ">
+            <li>
+              <div class="search ms-auto me-auto mb-2 mb-lg-0 gap-3">
+                <div class="searchIcon">
+                  <ion-icon name="search-outline"></ion-icon>
+                </div>
+                <div class="searchInput">
+                  <input type="text" placeholder="Search...">
+                </div>
+                <div class="close">
+                  <ion-icon name="close-outline"></ion-icon>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="icon">
+                <svg width="24" height="24" viewBox="0 0 24 24   " fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5 23C3.34315 23 2 21.6569 2 20C2 18.603 2.95486 17.429 4.24752 17.0952L4.69039 15.7666C3.68249 15.3428 2.94961 14.3834 2.8609 13.2301L2.15634 4.07081C2.10986 3.46658 1.60601 3 1 3C0.447715 3 0 2.55228 0 2C0 1.44772 0.447715 1 1 1C2.65109 1 4.02381 2.27119 4.15045 3.91741L23 3.94461C23.6306 3.94461 24.1038 4.52119 23.9808 5.13969L22.301 13.5852C22.0218 14.989 20.7899 16 19.3586 16H6.72076L6.29044 17.291C7.00909 17.6339 7.56987 18.2544 7.8341 19.0137C7.88806 19.0047 7.94348 19 8 19H16.1707C16.5825 17.8348 17.6938 17 19 17C20.6569 17 22 18.3431 22 20C22 21.6569 20.6569 23 19 23C17.6938 23 16.5825 22.1652 16.1707 21H8C7.94348 21 7.88806 20.9953 7.8341 20.9863C7.42615 22.1586 6.31133 23 5 23ZM4.98355 19.0001C4.43885 19.0089 4 19.4532 4 20C4 20.5523 4.44772 21 5 21C5.55228 21 6 20.5523 6 20C6 19.4533 5.56122 19.009 5.01659 19.0001C5.0056 19.0003 4.99458 19.0003 4.98355 19.0001V19.0001ZM19 21C19.5523 21 20 20.5523 20 20C20 19.4477 19.5523 19 19 19C18.4477 19 18 19.4477 18 20C18 20.5523 18.4477 21 19 21Z" />
+                </svg>
+              </a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link " id="nav" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Brand
+              </a>
+
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" id="dropdown-item" href="#">Geoff Max</a></li>
+                <li><a class="dropdown-item" id="dropdown-item" href="#">Ventela</a></li>
+                <li><a class="dropdown-item" id="dropdown-item" href="#">Vans</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+    </script>
+    <!-- Search Icon -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- SearchQuery-->
+    <script>
+      let searchIcon = document.querySelector('.searchIcon');
+      let search = document.querySelector('.search');
+      let close = document.querySelector('.close');
+
+      searchIcon.onclick = function () {
+        search.classList.add('search-active');
+      }
+      close.onclick = function () {
+        search.classList.remove('search-active');
+      }
+    </script>
+
+    <!-- js untuk slide gambar -->
+    <!-- <script type="text/javascript">
+    var slides = document.querySelectorAll('.img-container');
+    var btns = document.querySelectorAll('.btn-slider');
+    let currentSlide = 1;
+
+    // manual slide 
+    var manualNav = function (manual) {
+      slides.forEach((slide) => {
+        slide.classList.remove('active');
+        btns.forEach((btn) => {
+          btn.classList.remove('active');
+        });
+      });
+
+      slides[manual].classList.add('active');
+      btns[manual].classList.add('active');
+    };
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        manualNav(i);
+        currentSlide = i;
+      });
+    });
+    //auto slide
+    var repeat = function (activeClass) {
+      let active = document.getElementsByClassName('active');
+      let i = 1;
+
+      var repeater = () => {
+        setTimeout(function () {
+          [...active].forEach((activeSlides) => {
+            activeSlides.classList.remove('active');
+          });
+
+          slides[i].classList.add('active');
+          btns[i].classList.add('active');
+          i++;
+
+          if (slides.length == 1) {
+            i = 0;
+          }
+
+          if (i >= slides.length) {
+            i = 0;
+          }
+          repeater();
+        }, 6000);
+      }
+      repeater();
+    }
+    repeat();
+  </script> -->
+</body>
+
+</html>

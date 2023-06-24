@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Caveat+Brush&family=Poppins:wght@500&display=swap');
+
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', arial, helvetica, sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* @media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+} */
+
+:root {
+  --dark: black;
+  --info-dark: #555e68;
+  --light: rgba(132, 139, 200, 0.18);
+  --info-light: #dce1eb;
+  --white: white;
+  --hijau-gelap1: rgba(9, 60, 88);
+  --hijau-gelap2: rgba(14, 34, 56);
+  --white-dark: rgba(240, 240, 240);
+  --birugelap: rgba(55, 138, 164, 1);
+  --birucerah: rgba(159, 225, 245);
+  --birucerahTR: rgba(159, 225, 245, .5);
+  --hijauTR: rgba(0, 255, 55, 0.2);
+  --hover: rgba(102, 163, 186);
+}
+
+body{
+  width: 100vw;
+  background-color: var(--info-light);
+}
+
+.fcontainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  /* background-color: aqua; */
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  position: fixed;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--white);
+  justify-content: space-around;
+  align-items: center;
+  z-index: 99999;
+  transition: all .5s ease;
+
+}
+
+.navbar .logo {
+  text-align: center;
+}
+
+.navbar #lg1 {
+  color: var(--birugelap);
+  font-family: 'Poppins';
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.navbar #lg2 {
+  color: var(--birugelap);
+  font-family: 'Allison';
+  font-weight: 600;
+  font-size: 2em;
+}
+
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+
+.navbar .menu .list-menu{
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: var(--dark);
+}
+.list-scrolled{
+    color: var(--white);
+  }
+
+.navbar .menu2 li a{
+  display: block;
+  /* text-align: center; */
+  padding: 14px 16px;
+  text-decoration: none;
+
+}
+
+
+.navbar .menu li a:hover,
+.navbar .menu2 li a:hover {
+  background-color: var(--birucerah);
+  border-radius: 20%;
+  color: var(--white);
+  fill: var(--white);
+}
+
+.navbar .toggle {
+  display: none;
+}
+.profile {
+  float: left;
+  overflow: hidden;
+}
+
+.profile-btn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.profile-content {
+  display: none;
+  position: fixed;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  max-width: 300px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  right: 4%;
+  text-align: left;
+}
+
+.profile-content .user,
+.profile-content .akun {
+  display: flex !important;
+  flex-wrap: wrap;
+  align-items: center !important;
+  gap: 10px !important;
+}
+
+.profile-content hr {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 1px;
+  background-color: black;
+}
+
+.profile-content .user:hover {
+  background-color: transparent !important;
+}
+
+.profile-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.profile-content a:hover {
+  background-color: #ddd !important;
+  border-radius: 0% !important;
+  color: black !important;
+  fill: black !important;
+}
+
+/* .dropdown:hover .dropdown-content {
+  display: block;
+} */
+
+.profile:hover .profile-content {
+  display: block;
+}
+
+.toggle-content {
+  display: none;
+  position: fixed;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  max-width: 300px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  right: 4%;
+  justify-content: flex-start;
+}
+.toggle-content .user,
+.toggle-content .toggle-menu {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-scrolled{
+  background-color: var(--birucerahTR); 
+}
+.konten{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 80vw;
+  min-height: 100vh;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.konten .path a{
+  color: var(--info-dark);
+  text-decoration: none;
+  font-weight: 500;
+}
+.konten .path a:nth-child(2){
+  color: var(--birugelap);
+}
+
+.konten .wrapper-akun{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 80vw;
+}
+.konten .wrapper-akun .menu-akun{
+  /* background-color: var(--white); */
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  height: 50vh;
+  gap: 10px;
+} 
+.konten .wrapper-akun .menu-akun li{
+  /* background-color: aqua; */
+  margin-left: 3%;
+  width: 70%;
+  padding: 10px;
+}
+.konten .wrapper-akun .menu-akun .list-menu-akun1.active-menu-akun,
+.konten .wrapper-akun .menu-akun .list-menu-akun2.active-menu-akun{
+  color: var(--dark);
+}
+
+.konten .wrapper-akun .menu-akun a{
+  text-decoration: none;
+  color: var(--info-dark);
+}
+
+.konten .wrapper-akun .form-akun{
+  background-color: var(--white);
+  width: 85%;
+  height: 100vh;
+}
+.konten .wrapper-akun .form-akun .MyAccount{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-top: 4%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.konten .wrapper-akun .form-akun .MyAccount h1{
+  margin-bottom: 10px;
+}
+
+.konten .wrapper-akun .form-akun .MyAccount .alertEdit{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--hijauTR);
+  padding: 20px;
+}
+.konten .wrapper-akun .form-akun .MyAccount .alertEdit i{
+  font-size: 20px;
+  cursor: pointer;
+}
+.konten .wrapper-akun .form-akun .MyAccount .alertEdit i:hover{
+  font-size: 25px;
+}
+.konten .wrapper-akun .form-akun .MyAccount .wrapper{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.konten .wrapper-akun .form-akun .MyAccount .personal{
+  width: 100%;
+}
+
+.konten .wrapper-akun .form-akun .MyAccount .form-MyAccount-personal{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.konten .wrapper-akun .form-akun .MyAccount .form-MyAccount-personal input{
+  /* width: ; */
+  height: 30px;
+  padding: 10px;
+  font-size: 16px;
+
+}
+
+.konten .wrapper-akun .form-akun .MyAccount .form-MyAccount-personal #save-btn{
+  width: 100px;
+  height: 45px;
+  margin-left: auto;
+  border: none;
+  color: var(--white);
+  background-color: var(--birugelap);
+}
+
+.konten .wrapper-akun .form-akun .MyAccount .form-MyAccount-personal #save-btn:hover{
+  cursor: pointer;
+  background-color: var(--hijau-gelap1);
+}
+
+
+/* .konten .wrapper-akun .form-akun #MyAccount{
+  display: none;
+} */
+
+.konten .wrapper-akun .form-akun .MyOrder{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-top: 4%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.konten .wrapper-akun .form-akun #MyOrder{
+  display: none;
+}
+
+.konten .wrapper-akun .form-akun .MyOrder table{
+  width: 100%;
+}
+
+.konten .wrapper-akun .form-akun .MyOrder table{
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid black;
+  text-align: center;
+}
+
+@media print {
+  .print{
+    display: block;
+  }
+
+  .navbar{
+    display: none;
+  }
+
+  .konten{
+    display: none;
+  }
+}

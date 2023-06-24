@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: 0;
+  list-style: none;
+  appearance: none;
+}
+
+body{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--info-light);
+}
+:root {
+  --dark: black;
+  --grey: rgba(41, 48, 66);
+  --info-dark: #7d8da1;
+  --light: rgba(132, 139, 200, 0.18);
+  --info-light: #dce1eb;
+  --info-light2: rgba(137, 136, 130);
+  --info-lightTR: rgba(255, 255, 255, 0.1);
+  --info-lightTR2: rgb(240, 240, 240, .4);
+  --info-lightTR3: rgb(240, 240, 240, .5);
+  --white: white;
+  --hijau-gelap1: rgba(9, 60, 88);
+  --hijau-gelap2: rgba(14, 34, 56);
+  --hijauTR: rgba(0, 255, 55, 0.2);
+  --white-dark: rgba(240, 240, 240);
+  --birugelap: rgba(55, 138, 164, 1);
+  --birucerah: rgba(159, 225, 245);
+  --birucerahTR: rgba(159, 225, 245, 0.5);
+  --hover: rgba(102, 163, 186);
+}
+.container {
+  display: grid;
+  /* gap: 1.8rem; */
+  grid-template-areas: "navbar konten";
+  grid-template-columns: 16rem auto;
+  width: 100vw;
+  height: 100vh;
+  /* width: 99%; */
+  /* margin: 0 0 auto; */
+}
+
+/* ================== SIDEBAR ======================*/
+aside {
+  /* grid-area: navbar; */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: var(--grey);
+  /* position: fixed;
+  width: 16rem;
+  height: 100%; */
+  /* display: none; */
+  
+}
+.logo {
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  margin: 2rem 1.5rem 2rem 0rem;
+  text-transform: uppercase;
+  justify-content: space-between;
+}
+.logo h4 {
+  font-size: 1.4rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.logo i {
+  font-size: 1.5rem;
+}
+.logo #close-nav {
+  display: none;
+}
+.toggle {
+  display: none;
+}
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem;
+  /* background-color: aqua; */
+  /* height: 90vh; */
+}
+.sidebar li{
+  display: flex;
+  margin-bottom: 1rem;
+}
+.sidebar li a{
+  padding: 1rem;
+  width: 100%;
+  color: var(--info-light2);
+  font-weight: 500;
+}
+.sidebar li:last-child{
+  position: absolute;
+  bottom: 1rem;
+}
+.sidebar li a i {
+  font-size: 1.2rem;
+  margin-right: .5rem;
+  width: 1.5rem;
+  text-align: center;
+}
+.sidebar li a.active{
+  background-color: var(--info-lightTR);
+  color: var(--birucerah);
+  border-radius: 8px;
+}
+.sidebar li a:hover{
+  background-color: var(--info-lightTR);
+  color: var(--birucerah);
+  border-radius: 8px;
+} 
+
+/* ================== KONTEN ======================*/
+
+.konten {
+  grid-area: konten;
+  background-color: var(--info-light);
+  display: grid;
+  grid-template-rows: 70px 92vh;
+  grid-template-columns: 1fr;
+  grid-template-areas: "topbar"
+                        "klien";
+  /* width: 100vw; */
+}
+.konten .topbar{
+  grid-area: topbar;
+}
+.konten .topbar ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 50px;
+  height: 100%;
+  /* width: 100%; */
+  background-color: var(--white);
+}
+.konten .topbar ul li i{
+  font-size: 1.5rem;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.konten .topbar ul li .profil{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.konten .topbar ul li .profil .pp{
+  display: flex;
+  width: 40px;
+  height: 40px;
+  background-color: var(--info-light);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.konten .topbar ul li .profil .pp img{
+  width: 35px;
+  height: 35px;
+  /* object-fit: contain;
+   */
+}
+
+.konten .topbar ul li .profil span{
+  font-weight: 500;
+}
+.konten .container-konten {
+  grid-area: klien;
+  height: 88vh;
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  background-color: var(--white);
+  border-radius: 5px;
+  width: 97%;
+  margin: 1.5rem auto auto auto ; 
+  padding: 20px;
+}
+.konten .container-konten .alertEdit{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--hijauTR);
+  padding: 20px;
+}
+.konten .container-konten .alertEdit i{
+  font-size: 20px;
+  cursor: pointer;
+}
+.konten .container-konten .alertEdit i:hover{
+  font-size: 25px;
+}
+.konten .container-konten .container-klien{
+  /* width: 100%; */
+  height: 100%;
+  overflow: auto;
+  margin-top: 10px;
+  padding: 10px;
+}
+.konten .container-konten .container-klien table{
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+.konten .container-konten .container-klien table th{
+  background-color: var(--grey);
+  color: var(--white);
+  height: 3rem;
+  border: solid 1px white;
+}
+.konten .container-konten .container-klien table tr td{ 
+  background-color: var(--info-light);
+  font-weight: 500;
+  height: 6rem;
+}
+.konten .container-konten .container-klien table tr:nth-child(even){
+  background-color: var(--info-lightTR3);
+}
+.konten .container-konten .container-klien table tr .btn a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 7px;
+  background-color: var(--grey);
+  color: var(--white);
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+  .container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  aside {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 4.5rem;
+    width: 100vw;
+    max-width: 100vw;
+    grid-template-columns: none;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+    top: 0;
+  }
+  .logo {
+    text-align: center;
+    padding: 0;
+  }
+  .toggle {
+    display: block;
+  }
+  .toggle a {
+    color: var(--dark);
+  }
+  .sidebar {
+    display: none;
+  }
+  .konten {
+    margin-left: 0;
+    margin-top: 75px;
+  }
+  .konten2 {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 1400px){
+  .konten .container-konten .container-1 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 992px){
+  .konten .container-konten .container-1 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

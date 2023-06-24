@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Poppins:wght@500&display=swap');
+
+*, html, body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', arial, helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --black: black;
+    --white: white;
+    --white-dark: rgb(240, 240, 240);
+    --birucerah : rgba(55, 138, 164, 1)
+}
+
+#brand {
+    margin-left: 1.5vw;
+    word-spacing: 0px;
+    text-align: center;
+    
+} 
+#br1 {
+    color: var(--birucerah);
+    font-family: 'Poppins';
+    font-weight: 700;
+    line-height: 51px;
+    font-size: 1em;
+}
+#br2 {
+    color: var(--birucerah);
+    font-family: 'Allison';
+    font-weight: 600;
+    line-height: 51px;
+    font-size: 1.5em;
+}
+
+
+#navbar {
+    background-color: transparent;
+    align-items: center;
+    display: flexbox;
+    flex-wrap: unset;
+}
+#toggle {
+    color: white;
+    background-color: white;
+}
+.navbar-nav {
+    align-items: center;
+    margin: auto;
+}
+.navbar-nav .icon svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--black);
+}
+.navbar-nav .icon svg:hover {
+    fill: #ffdd00;
+}
+.nav-item #nav {
+    color: var(--black);
+    font-weight: lighter;
+    font-size: 13px;
+}
+#dropdown-item {
+    font-size: 13px;
+}
+
+.nav-item #nav:hover {
+    color: #ffdd00;
+    animation: all 1 ease-in-out
+}
+
+.navbar-nav .search {
+    margin-right: 2vh;
+    position: relative;
+    width: 40px;
+    height: 30px;
+    background-color: var(--white-dark);
+    display: flex;
+    justify-content: space-between;
+    transition: .5s;
+    overflow: hidden;
+    color: var(--black);
+    box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1); 
+    border-radius: 15px;
+    /* border: .5px solid   var(--black); */
+}
+
+.navbar-nav .search .searchIcon {
+    position: relative;
+    min-width: 40px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    font: size 1.5em ;
+    cursor: pointer;
+}
+.navbar-nav .search.search-active {
+    width: 300px; 
+    
+}
+
+.navbar-nav .search .close {
+    position: relative;
+    width: 40px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: size 1.25em ;
+    cursor: pointer;
+    scale: 0;
+    transition: .5s;
+    
+}
+
+.navbar-nav .search.search-active .close{
+    scale: 1;
+    transition-delay: .5s;
+}
+
+.navbar-nav .search .searchInput {
+    position: absolute;
+    left: 40px;
+    width: calc(100%-20vh);
+    height: 100%;
+    line-height: 40px;
+}
+
+.navbar-nav .search .searchInput input {
+    position: absolute;
+    font-size: 13px;
+    width: 230px;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: var(--white-dark);
+}
+
+
+
+
